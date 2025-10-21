@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forks: Your Destiny</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="background-music" loop>
+    <source src="assets/twilight-vn/bellas-lullaby.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="fade-in">
+    <div id="start-overlay">
+      <h1>Forks: Your Destiny</h1>
+      <p>A small town holds ancient secrets. Will you discover love with the mysterious outsider or find warmth with the local protector?</p>
+      <button onclick="startGame()">Begin Your Story</button>
+      <div id="music-controls">
+        <button id="music-toggle" onclick="toggleMusic()">🔊 Music On</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene Screen -->
+  <div id="scene" class="hidden">
+    <div id="affinity-meter">
+      <div class="affinity">
+        <div class="affinity-name">Edward</div>
+        <div class="affinity-bar">
+          <div id="edward-fill" class="affinity-fill" style="width: 0%"></div>
+        </div>
+      </div>
+      <div class="affinity">
+        <div class="affinity-name">Jacob</div>
+        <div class="affinity-bar">
+          <div id="jacob-fill" class="affinity-fill" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="background"></div>
+    <div id="character"></div>
+    <div id="dialogue-box">
+      <p id="dialogue"></p>
+      <div id="choices"></div>
+    </div>
+  </div>
+
+  <!-- Ending Screen -->
+  <div id="ending-screen" class="hidden">
+    <div id="ending-content">
+      <h2 id="ending-title">The End</h2>
+      <p id="ending-text"></p>
+      <button onclick="restartGame()">Begin New Story</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
